@@ -1,0 +1,7 @@
+torch
+fastapi
+uvicorn
+transformers == 4.46.3
+beautifulsoup4
+requests
+pydantic
