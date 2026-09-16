@@ -1,5 +1,0 @@
-{
-  "kube-context": "kubernetes-admin@kubernetes",
-  "repository-uri": "myregistry.com/mlflow-test",
-  "kube-job-template-path": "k8s-job-template.yaml"
-}

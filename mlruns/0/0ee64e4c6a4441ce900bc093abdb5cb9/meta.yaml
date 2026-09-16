@@ -1,0 +1,14 @@
+artifact_uri: file:///root/hf-app/mlruns/0/0ee64e4c6a4441ce900bc093abdb5cb9/artifacts
+end_time: 1789537846913
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0ee64e4c6a4441ce900bc093abdb5cb9
+run_name: worried-snail-917
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1789537685754
+status: 3
+tags: []
+user_id: root

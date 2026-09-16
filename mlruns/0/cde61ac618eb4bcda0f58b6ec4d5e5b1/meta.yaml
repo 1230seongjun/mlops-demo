@@ -1,0 +1,14 @@
+artifact_uri: file:///root/hf-app/mlruns/0/cde61ac618eb4bcda0f58b6ec4d5e5b1/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cde61ac618eb4bcda0f58b6ec4d5e5b1
+run_name: painted-flea-417
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1789536774509
+status: 1
+tags: []
+user_id: root
