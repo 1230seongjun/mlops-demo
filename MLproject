@@ -1,0 +1,8 @@
+name: python-ml-project
+
+docker_env:
+  image: test
+
+entry_points:
+  main:
+    command: "python3 test.py"

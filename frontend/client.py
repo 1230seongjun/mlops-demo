@@ -24,7 +24,7 @@ model = st.selectbox(
     [
         "facebook/bart-large-cnn",
         "google-t5/t5-small",
-        "/model/t5-small"
+        "models:/t5-small-model/1"
     ]
 )
 

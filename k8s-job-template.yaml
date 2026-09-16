@@ -1,0 +1,29 @@
+# k8s-job-template.yaml
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "mlflow_project_run"
+  namespace: mlflow
+spec:
+  ttlSecondsAfterFinished: 3600
+  backoffLimit: 2
+  template:
+    spec:
+      containers:
+      - name: "mlflow_project_run"
+        image: "myregistry.com/mlflow-test"
+        command: ["python3", "test.py"]
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1000m"
+          limits:
+            memory: "4Gi"
+            cpu: "2000m"
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: "https://172.16.0.200:5000"
+      imagePullSecrets:
+      - name: regcred
+      restartPolicy: Never
+

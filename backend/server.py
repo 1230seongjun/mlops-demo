@@ -4,6 +4,8 @@ from pydantic import BaseModel
 from bs4 import BeautifulSoup
 from transformers import pipeline
 import requests
+import mlflow
+import mlflow.transformers
 
 app = FastAPI()
 
@@ -18,15 +20,15 @@ class SummarizeRequest(BaseModel):
 MODEL_CACHE = {}
 
 
-def get_model(model_name):
-    if model_name not in MODEL_CACHE:
-        MODEL_CACHE[model_name] = pipeline(
-            task="summarization",
-            model=model_name,
-            tokenizer=model_name,
-            framework="pt"
+def get_model(model_uri):
+    if model_uri not in MODEL_CACHE:
+        print(f"Loading model from MLflow: {model_uri}")
+        MODEL_CACHE[model_uri] = (
+            mlflow.transformers.load_model(model_uri)
         )
-    return MODEL_CACHE[model_name]
+        print(model_uri)
+        print("Model loaded")
+    return MODEL_CACHE[model_uri]
 
 def extract_url(url):
     headers = {
